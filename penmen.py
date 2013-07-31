@@ -114,8 +114,9 @@ def findMatches(pixel, rects, thresh = 0.8):
     return matches
 
 def main():
-
-    SOURCE_FILE = "s.png"
+    import sys
+    SOURCE_FILE = sys.argv[1] if len(sys.argv) > 1 else "sample.png"
+    print SOURCE_FILE
     WB_FILE = "binary.png"
     RECT_FILE = "rect.png"
     DEST_FILE = "match.png"
